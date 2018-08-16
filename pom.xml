@@ -117,23 +117,15 @@
                     <configuration>
                         <archive>
                             <manifestEntries>
-                                <!-- specification manifest entries begin-->
                                 <Specification-Title>${specification.title}</Specification-Title>
-                                <Specification-Vendor>${specification.vendor}</Specification-Vendor>
-                                <Specification-Version>${specification.version}</Specification-Version>
-                                <!-- specification manifest entries begin-->
-                                
-                                <!-- implementation manifest entries begin-->
                                 <Implementation-Title>${implementation.title}</Implementation-Title>
-                                <Implementation-Vendor>${implementation.vendor}</Implementation-Vendor>
                                 <Implementation-Version>${implementation.version}</Implementation-Version>
-                                <!-- implementation manifest entries end-->
-                                
-                                <!-- build manifest entries begin-->
+                                <Implementation-Vendor>${implementation.vendor}</Implementation-Vendor>
+                                <Specification-Version>${specification.version}</Specification-Version>
+                                <Specification-Vendor>${specification.vendor}</Specification-Vendor>
                                 <Built-By>${built.by}</Built-By>
                                 <Built-On>${built.on}</Built-On>
                                 <Url>${project.url}</Url>
-                                <!-- build manifest entries end-->
                             </manifestEntries>
                         </archive>
                         <excludes>
@@ -227,7 +219,7 @@
                         <groupId>org.liquibase</groupId>
                         <artifactId>liquibase-maven-plugin</artifactId>
                         <configuration>
-                            <contexts>dev,qac,uat,pro</contexts>
+                            <contexts>pro</contexts>
                             <changeLogFile>META-INF/migrations/db.changelog-master.xml</changeLogFile>
                             <propertyFile>${user.home}/.hmis/etc/dbms/liquibase/dif.properties</propertyFile>
                             <diffTypes>tables,views,columns,indexes,foreignkeys,primarykeys,uniqueconstraints,data</diffTypes>
