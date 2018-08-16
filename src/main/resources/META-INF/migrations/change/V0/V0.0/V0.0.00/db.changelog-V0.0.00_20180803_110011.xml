@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"><!--
+================================================================================
+db.changelog-V0.0.00_20180803_110011.xml
+================================================================================
+@author    Medisys<devs@medisys.com.my>
+@vendor    Medical Systems Co. Ltd
+@web       medisys.com.my
+@version   0.0.00.GA
+@since     0.0.00.GA
+================================================================================
+--> <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-1" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="country_id" constraintName="PRIMARY" tableName="countries"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-2" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="department_id" constraintName="PRIMARY" tableName="departments"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-3" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="employee_id" constraintName="PRIMARY" tableName="employees"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-4" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="employee_id, start_date" constraintName="PRIMARY" tableName="job_history"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-5" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="job_id" constraintName="PRIMARY" tableName="jobs"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-6" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="location_id" constraintName="PRIMARY" tableName="locations"/>
+    </changeSet>
+    <changeSet author="medisys" labels="m00,ddl,key,pkc" context="dev,qac,uat,pro" id="1533294011000-7" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <addPrimaryKey columnNames="region_id" constraintName="PRIMARY" tableName="regions"/>
+    </changeSet>
+    <changeSet author="medisys" id="1533294011000-8" logicalFilePath="db.changelog-V0.0.00_20180803_110011.xml">
+        <tagDatabase tag="20180803"/>
+    </changeSet>
+</databaseChangeLog>
