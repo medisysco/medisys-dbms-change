@@ -12,14 +12,14 @@ db.changelog-V0.0.00_20180802_110011.xml
 @version   0.0.00.GA
 @since     0.0.00.GA
 ================================================================================
---> <changeSet author="medisys" labels="m00,dml" context="dev,qac,uat,pro" id="1533207611000-1" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+--> <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-1" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/countries__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="countries">
             <column header="country_id" name="country_id" type="STRING"/>
             <column header="country_name" name="country_name" type="STRING"/>
             <column header="region_id" name="region_id" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac" id="1533207611000-2" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,trx" context="dev,qac" id="1533207611000-2" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/departments__dev_qac.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="departments">
             <column header="department_id" name="department_id" type="NUMERIC"/>
             <column header="department_name" name="department_name" type="STRING"/>
@@ -27,7 +27,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="location_id" name="location_id" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="uat,pro" id="1533207611000-3" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,ini" context="uat,pro" id="1533207611000-3" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/departments__uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="departments">
             <column header="department_id" name="department_id" type="NUMERIC"/>
             <column header="department_name" name="department_name" type="STRING"/>
@@ -35,7 +35,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="location_id" name="location_id" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac" id="1533207611000-4" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,trx" context="dev,qac" id="1533207611000-4" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/employees__dev_qac.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="employees">
             <column header="employee_id" name="employee_id" type="NUMERIC"/>
             <column header="first_name" name="first_name" type="STRING"/>
@@ -50,7 +50,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="department_id" name="department_id" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac" id="1533207611000-5" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,trx" context="dev,qac" id="1533207611000-5" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/job_history__dev_qac.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="job_history">
             <column header="employee_id" name="employee_id" type="NUMERIC"/>
             <column header="start_date" name="start_date" type="DATE"/>
@@ -59,7 +59,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="department_id" name="department_id" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac,uat,pro" id="1533207611000-6" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-6" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/jobs__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="jobs">
             <column header="job_id" name="job_id" type="STRING"/>
             <column header="job_title" name="job_title" type="STRING"/>
@@ -67,7 +67,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="max_salary" name="max_salary" type="NUMERIC"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac,uat,pro" id="1533207611000-7" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-7" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/locations__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="locations">
             <column header="location_id" name="location_id" type="NUMERIC"/>
             <column header="street_address" name="street_address" type="STRING"/>
@@ -77,7 +77,7 @@ db.changelog-V0.0.00_20180802_110011.xml
             <column header="country_id" name="country_id" type="STRING"/>
         </loadData>
     </changeSet>
-    <changeSet author="medisys" labels="m00,dml" context="dev,qac,uat,pro" id="1533207611000-8" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
+    <changeSet author="medisys" labels="m00,dml,ini" context="dev,qac,uat,pro" id="1533207611000-8" logicalFilePath="db.changelog-V0.0.00_20180802_110011.xml">
         <loadData commentLineStartsWith="#" encoding="UTF-8" file="20180802_110011/regions__dev_qac_uat_pro.csv" relativeToChangelogFile="true" quotchar="&quot;" separator="," tableName="regions">
             <column header="region_id" name="region_id" type="NUMERIC"/>
             <column header="region_name" name="region_name" type="STRING"/>

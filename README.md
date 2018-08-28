@@ -18,6 +18,58 @@ cd ./medisys-dbms-change
 
 ```
 
+### Properties Files
+```bash
+mkdir -p $HOME/.hmis/etc/dbms/liquibase
+cp ./src/test/resources/liquibase/*.properties $HOME/.hmis/etc/dbms/liquibase
+cd $HOME/.hmis/etc/dbms/liquibase
+explorer .
+
+```
+
+### Path Settings
+```bash
+export MYSQL_HOME=/c/opt/xampp/mysql
+export PATH=$PATH:$MYSQL_HOME/bin
+
+```
+
+### Database Creation
+```bash
+# execute database creation script for empty password
+mysql -uroot < ./src/test/resources/schema/hr_all_ini.sql
+# execute database creation script for prompt password in cli
+mysql -uroot -p < ./src/test/resources/schema/hr_all_ini.sql
+
+```
+
+### Import Dump
+```bash
+# import hr_dev_bas_ini.sql dump into hr_dev from cli
+mysql -uroot hr_dev < ./src/test/resources/schema/hr_dev_bas_ini.sql
+# import hr_dev_bas_ini.sql dump into hr_dev & prompt password from cli
+mysql -uroot -p hr_dev < ./src/test/resources/schema/hr_dev_bas_ini.sql
+
+```
+
+### Maven Commands
+```bash
+mvn clean install -Pdev,log
+mvn clean install -Pdev,syn
+mvn clean install -Pdev,upd
+mvn clean install -Pdif
+
+mvn clean install -Pqac,syn
+mvn clean install -Pqac,upd
+
+mvn clean install -Puat,syn
+mvn clean install -Puat,upd
+
+mvn clean install -Ppro,syn
+mvn clean install -Ppro,upd
+
+```
+
 Here is the maven repository of this project. add the repository to `.m2` `settings.xml` or `pom.xml`.
 
 

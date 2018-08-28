@@ -18,8 +18,9 @@
   │   │       ├─ liquibase
   │   │       │   ├─ dev.properties
   │   │       │   ├─ dif.properties
-  │   │       │   ├─ pro.properties
-  │   │       │   └─ syn.properties
+  │   │       │   ├─ qac.properties
+  │   │       │   ├─ uat.properties
+  │   │       │   └─ pro.properties
   │   │       ├─ schema/
   │   │       │   ├─ hr_all_ini.md
   │   │       │   ├─ hr_all_ini.sql
@@ -76,9 +77,13 @@
 
 ```sql
 DROP DATABASE IF EXISTS `hr_dev`;
+DROP DATABASE IF EXISTS `hr_qac`;
+DROP DATABASE IF EXISTS `hr_uat`;
 DROP DATABASE IF EXISTS `hr_pro`;
 
 CREATE DATABASE IF NOT EXISTS `hr_dev` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `hr_qac` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `hr_uat` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE DATABASE IF NOT EXISTS `hr_pro` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
