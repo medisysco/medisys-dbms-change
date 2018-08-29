@@ -19,4 +19,5 @@ db.changelog-V0.0.00.xml
     <include file="V0.0.00/db.changelog-V0.0.00_20180804_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
     <include file="V0.0.00/db.changelog-V0.0.00_20180805_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
     <include file="V0.0.00/db.changelog-V0.0.00_20180806_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>
+<!--<include file="V0.0.00/db.changelog-V0.0.00_20180807_110011.xml" relativeToChangelogFile="true" context="dev,qac,uat,pro"/>-->
 </databaseChangeLog>

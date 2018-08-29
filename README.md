@@ -68,9 +68,12 @@ mvn clean install -Puat,upd
 mvn clean install -Ppro,syn
 mvn clean install -Ppro,upd
 
+mvn clean install -Ppro,del
+mvn clean install -Ppro,rol -Dmedisys.tag=20180806
+
 ```
 
-Here is the maven repository of this project. add the repository to `.m2` `settings.xml` or `pom.xml`.
+You may use [`Epoch Converter`][300] for **UTC Time Stamp** Standard Id, Here is the maven repository of this project. add the repository to `.m2` `settings.xml` or `pom.xml`.
 
 
 ```xml
@@ -142,7 +145,7 @@ This project started aim to development HL7 Interoperability/Integration to add 
 
 
 [100]:  http://www.medisys.com.my "Medical Systems Co."
-[101]:  https://github.com/ "GitHub"
+[101]:  https://github.com "GitHub"
 [102]:  https://github.com/medisysco/medisys-dbms-parent "medisys-dbms-parent"
 [103]:  https://github.com/medisysco/medisys-dbms-change "medisys-dbms-change"
 
@@ -150,3 +153,5 @@ This project started aim to development HL7 Interoperability/Integration to add 
 [201]:  mailto:sherbini@medisys.com.my "Mohamad Al-Sherbini(Sherbini)"
 [202]:  mailto:aziz@medisys.com.my "Azizul Hoque Bhuyan(Aziz)"
 [203]:  mailto:shahed@medisys.com.my "Md Shahed Hossain(Shahed)"
+
+[300]: https://www.epochconverter.com "Epoch Converter"

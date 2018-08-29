@@ -40,6 +40,7 @@
         <change.on>${maven.build.timestamp}</change.on>
         <built.on>${maven.build.timestamp}</built.on>
         <maven.test.skip>true</maven.test.skip>
+        <medisys.tag>20101010</medisys.tag>
         <java.version>1.8</java.version>
         <medisys.ctx>dev</medisys.ctx>
         <medisys.env>dev</medisys.env>
@@ -254,6 +255,51 @@
                             <execution>
                                 <phase>prepare-package</phase>
                                 <goals><goal>changelogSync</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>rol</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.liquibase</groupId>
+                        <artifactId>liquibase-maven-plugin</artifactId>
+                        <configuration>
+                            <changeLogFile>META-INF/migrations/db.changelog-master.xml</changeLogFile>
+                            <propertyFile>${user.home}/.hmis/etc/dbms/liquibase/${medisys.env}.properties</propertyFile>
+                            <rollbackTag>${medisys.tag}</rollbackTag>
+                            <contexts>${medisys.ctx}</contexts>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals><goal>rollback</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>del</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.liquibase</groupId>
+                        <artifactId>liquibase-maven-plugin</artifactId>
+                        <configuration>
+                            <changeLogFile>META-INF/migrations/db.changelog-master.xml</changeLogFile>
+                            <propertyFile>${user.home}/.hmis/etc/dbms/liquibase/${medisys.env}.properties</propertyFile>
+                            <contexts>${medisys.ctx}</contexts>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals><goal>dropAll</goal></goals>
                             </execution>
                         </executions>
                     </plugin>
